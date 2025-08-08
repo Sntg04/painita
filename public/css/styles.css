@@ -11,6 +11,7 @@ body {
   font-family: 'Arial', sans-serif;
   color: var(--black);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 /* Colores Personalizados */
@@ -81,6 +82,19 @@ body {
   cursor: pointer;
 }
 
+/* Textos */
+.fst-italic {
+  font-style: italic;
+  position: relative;
+}
+
+.fst-italic::before,
+.fst-italic::after {
+  content: '"';
+  color: var(--red);
+  font-size: 1.2em;
+}
+
 /* Navbar */
 .navbar {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -96,6 +110,11 @@ body {
   opacity: 0.8;
 }
 
+/* Secciones */
+section {
+  padding: 5rem 0;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .display-5 {
@@ -109,6 +128,10 @@ body {
   .navbar-brand {
     font-size: 1.5rem !important;
   }
+
+  section {
+    padding: 3rem 0;
+  }
 }
 
 /* Animaciones */
@@ -119,4 +142,11 @@ body {
 
 section {
   animation: fadeIn 0.6s ease-out;
+}
+
+/* Efectos hover para iconos */
+.card-hover-effect:hover .icono-valor {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  background-color: rgba(255, 0, 0, 0.2);
 }
