@@ -1,4 +1,56 @@
-.hero-section {
-    background-color: #f8f9fa;
-    padding: 100px 0;
+:root {
+  --red: #FF0000;
+  --black: #000000;
+  --white: #FFFFFF;
+}
+
+/* Colores personalizados */
+.bg-red-custom {
+  background-color: var(--red) !important;
+}
+
+.text-red-custom {
+  color: var(--red) !important;
+}
+
+.bg-dark-custom {
+  background-color: #111111 !important;
+}
+
+.border-red-custom {
+  border: 2px solid var(--red) !important;
+}
+
+.btn-red-custom {
+  background-color: var(--red);
+  color: var(--white);
+  border: none;
+  font-weight: bold;
+}
+
+.btn-red-custom:hover {
+  background-color: #cc0000;
+  color: var(--white);
+}
+
+/* Estilos para la calculadora */
+.form-range::-webkit-slider-thumb {
+  background: var(--red);
+}
+
+.form-range::-moz-range-thumb {
+  background: var(--red);
+}
+
+.form-range::-ms-thumb {
+  background: var(--red);
+}
+
+/* Ajustes generales */
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+.card {
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
 }

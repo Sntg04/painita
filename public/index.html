@@ -7,19 +7,88 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="/css/styles.css" rel="stylesheet">
 </head>
-<body>
-  <div class="container mt-5">
-    <h1 class="text-primary">Solicita tu Préstamo</h1>
-    <form id="formPrestamo">
-      <div class="mb-3">
-        <label class="form-label">Monto:</label>
-        <input type="number" class="form-control" id="monto" required>
-      </div>
-      <button type="submit" class="btn btn-primary">Enviar</button>
-    </form>
-    <div id="resultado" class="mt-3"></div>
-  </div>
+<body class="bg-black text-white">
+  <!-- Barra de Navegación -->
+  <nav class="navbar navbar-dark bg-red-custom py-3">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">
+        <img src="/images/logo.png" alt="PAINITA" height="40" class="d-inline-block align-top me-2">
+        PAINITA
+      </a>
+    </div>
+  </nav>
 
+  <!-- Hero Section con Calculadora -->
+  <section class="container my-5">
+    <div class="row">
+      <div class="col-lg-6">
+        <h1 class="display-4 fw-bold mb-4">PRÉSTAMOS <span class="text-red-custom">RÁPIDOS</span> Y <span class="text-red-custom">SEGUROS</span></h1>
+        <p class="lead mb-4">Obtén tu dinero en minutos con los mejores intereses del mercado</p>
+        <div class="d-flex gap-3">
+          <a href="#calculadora" class="btn btn-red-custom btn-lg">Calcular Préstamo</a>
+          <a href="/solicitar" class="btn btn-outline-light btn-lg">Solicitar Ahora</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calculadora de Préstamos -->
+  <section id="calculadora" class="container bg-dark-custom p-5 rounded-3 mb-5">
+    <h2 class="text-center mb-4"><span class="text-red-custom">CALCULADORA</span> DE PRÉSTAMOS</h2>
+    
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card bg-black border-red-custom">
+          <div class="card-body p-4">
+            <!-- Selector de Monto -->
+            <div class="mb-4">
+              <label for="monto" class="form-label">MONTO DEL PRÉSTAMO</label>
+              <input type="range" class="form-range" min="100000" max="1200000" step="50000" id="monto" value="500000">
+              <div class="d-flex justify-content-between mt-2">
+                <span>$100.000</span>
+                <span id="montoValue">$500.000</span>
+                <span>$1'200.000</span>
+              </div>
+            </div>
+
+            <!-- Selector de Plazo -->
+            <div class="mb-4">
+              <label for="plazo" class="form-label">PLAZO (DÍAS)</label>
+              <input type="range" class="form-range" min="8" max="120" step="1" id="plazo" value="30">
+              <div class="d-flex justify-content-between mt-2">
+                <span>8 días</span>
+                <span id="plazoValue">30 días</span>
+                <span>120 días</span>
+              </div>
+            </div>
+
+            <!-- Resultados -->
+            <div class="bg-red-custom text-white p-3 rounded mb-3">
+              <div class="d-flex justify-content-between">
+                <span>Interés:</span>
+                <span id="interes">$25.000</span>
+              </div>
+              <div class="d-flex justify-content-between fw-bold">
+                <span>Total a pagar:</span>
+                <span id="total">$525.000</span>
+              </div>
+            </div>
+
+            <button id="solicitarBtn" class="btn btn-red-custom w-100 py-3 fw-bold">SOLICITAR AHORA</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-red-custom py-4 mt-5">
+    <div class="container text-center">
+      <p class="mb-0">© 2023 PAINITA - Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="/js/main.js"></script>
 </body>
 </html>
