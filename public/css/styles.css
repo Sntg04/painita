@@ -130,6 +130,38 @@ section {
   padding: 5rem 0;
 }
 
+/* Testimonios Mejorados */
+#testimonios {
+  background-color: var(--black);
+}
+
+#testimonios .card {
+  background-color: var(--white);
+  color: var(--black);
+  border: 2px solid var(--red);
+}
+
+#testimonios .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(255, 0, 0, 0.2) !important;
+}
+
+#testimonios .icono-valor {
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+#testimonios h2 {
+  color: var(--white);
+}
+
+#testimonios .card-body {
+  color: var(--black) !important;
+}
+
+#testimonios .fst-italic {
+  color: var(--dark-black) !important;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .display-5 {
