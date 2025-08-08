@@ -3,18 +3,21 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 
-// Configuración inicial
+// Importa los routers correctamente
+const prestamosRouter = require('./routes/prestamos');
+const crmRouter = require('./routes/crm');
+
 const app = express();
+
+// Middlewares
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
-// Archivos estáticos
 app.use(express.static(path.join(__dirname, '../public')));
 
 // Rutas
-app.use('/api/prestamos', require('./routes/prestamos'));
-app.use('/api/crm', require('./routes/crm'));
+app.use('/api/prestamos', prestamosRouter);
+app.use('/api/crm', crmRouter);
 
 // Manejo de errores
 app.use((err, req, res, next) => {
@@ -22,7 +25,6 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: 'Error interno del servidor' });
 });
 
-// Iniciar servidor
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`🚀 PAINITA corriendo en http://localhost:${PORT}`);
