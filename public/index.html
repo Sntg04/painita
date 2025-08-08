@@ -8,34 +8,34 @@
   <link href="/css/styles.css" rel="stylesheet">
   <link rel="icon" href="/images/favicon.png" type="image/png">
 </head>
-<body class="bg-white">
+<body class="bg-custom">
   <!-- Barra de Navegación -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-red-custom py-3">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black py-3">
     <div class="container">
       <a class="navbar-brand fw-bold fs-3" href="#">
         <img src="/images/logo.png" alt="PAINITA" height="40" class="d-inline-block align-top me-2">
-        PAINITA
+        <span class="text-red-custom">PAINITA</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#calculadora">Calculadora</a></li>
-          <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
-          <li class="nav-item"><a class="nav-link" href="#testimonios">Testimonios</a></li>
-          <li class="nav-item"><a class="nav-link" href="/solicitar">Solicitar</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#calculadora">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#nosotros">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#testimonios">Testimonios</a></li>
+          <li class="nav-item"><a class="btn btn-red-custom ms-2" href="/solicitar">Solicitar</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section class="container my-5 py-4 text-center">
+  <section class="container my-5 py-5 text-center bg-black-custom rounded-3">
     <div class="row justify-content-center">
       <div class="col-lg-8">
-        <h1 class="display-5 fw-bold mb-4">PRÉSTAMOS <span class="text-red-custom">INMEDIATOS</span></h1>
-        <p class="lead mb-4 text-muted">Desde $100.000 hasta $1'200.000 con plazos de 8 a 120 días</p>
+        <h1 class="display-5 fw-bold mb-4 text-white">PRÉSTAMOS <span class="text-red-custom">INMEDIATOS</span></h1>
+        <p class="lead mb-4 text-light">Desde $100.000 hasta $1'200.000 con plazos de 8 a 120 días</p>
         <a href="#calculadora" class="btn btn-red-custom btn-lg px-4">Calcular Ahora</a>
       </div>
     </div>
@@ -45,28 +45,28 @@
   <section id="calculadora" class="container mb-5 py-4">
     <div class="row justify-content-center">
       <div class="col-md-8 col-lg-6">
-        <div class="card border-red-custom shadow-sm card-hover-effect">
+        <div class="card bg-black text-white border-red-custom shadow-lg card-hover-effect">
           <div class="card-body p-4 text-center">
             <h3 class="mb-4 text-red-custom">CALCULA TU PRÉSTAMO</h3>
             
             <!-- Monto -->
             <div class="mb-4">
-              <label for="monto" class="form-label fw-bold">MONTO</label>
+              <label for="monto" class="form-label fw-bold text-white">MONTO</label>
               <input type="range" class="form-range" min="100000" max="1200000" step="50000" id="monto" value="500000">
-              <div class="d-flex justify-content-between mt-2 px-3">
+              <div class="d-flex justify-content-between mt-2 px-3 text-light">
                 <small>$100K</small>
-                <span id="montoValue" class="fw-bold">$500K</span>
+                <span id="montoValue" class="fw-bold text-white">$500K</span>
                 <small>$1.2M</small>
               </div>
             </div>
 
             <!-- Plazo -->
             <div class="mb-4">
-              <label for="plazo" class="form-label fw-bold">PLAZO (DÍAS)</label>
+              <label for="plazo" class="form-label fw-bold text-white">PLAZO (DÍAS)</label>
               <input type="range" class="form-range" min="8" max="120" step="1" id="plazo" value="30">
-              <div class="d-flex justify-content-between mt-2 px-3">
+              <div class="d-flex justify-content-between mt-2 px-3 text-light">
                 <small>8 días</small>
-                <span id="plazoValue" class="fw-bold">30 días</span>
+                <span id="plazoValue" class="fw-bold text-white">30 días</span>
                 <small>120 días</small>
               </div>
             </div>
@@ -81,35 +81,35 @@
   </section>
 
   <!-- Beneficios -->
-  <section class="bg-light py-5">
+  <section class="bg-black-custom py-5">
     <div class="container text-center">
-      <h2 class="mb-5">¿POR QUÉ <span class="text-red-custom">PAINITA</span>?</h2>
+      <h2 class="mb-5 text-white">¿POR QUÉ <span class="text-red-custom">PAINITA</span>?</h2>
       <div class="row justify-content-center">
         <div class="col-md-4 mb-4">
-          <div class="p-4 h-100 card-hover-effect">
+          <div class="p-4 h-100 bg-dark rounded-3 card-hover-effect">
             <div class="icono-valor">
               <span class="fs-1">⚡</span>
             </div>
             <h5 class="text-red-custom">Rápido</h5>
-            <p class="text-muted">Dinero en tu cuenta en menos de 24 horas</p>
+            <p class="text-light">Dinero en tu cuenta en menos de 24 horas</p>
           </div>
         </div>
         <div class="col-md-4 mb-4">
-          <div class="p-4 h-100 card-hover-effect">
+          <div class="p-4 h-100 bg-dark rounded-3 card-hover-effect">
             <div class="icono-valor">
               <span class="fs-1">📱</span>
             </div>
             <h5 class="text-red-custom">Fácil</h5>
-            <p class="text-muted">Solo necesitas tu cédula y cuenta bancaria</p>
+            <p class="text-light">Solo necesitas tu cédula y cuenta bancaria</p>
           </div>
         </div>
         <div class="col-md-4 mb-4">
-          <div class="p-4 h-100 card-hover-effect">
+          <div class="p-4 h-100 bg-dark rounded-3 card-hover-effect">
             <div class="icono-valor">
               <span class="fs-1">🔒</span>
             </div>
             <h5 class="text-red-custom">Seguro</h5>
-            <p class="text-muted">Tus datos están 100% protegidos</p>
+            <p class="text-light">Tus datos están 100% protegidos</p>
           </div>
         </div>
       </div>
@@ -117,22 +117,22 @@
   </section>
 
   <!-- Sobre Nosotros -->
-  <section id="nosotros" class="py-5 bg-white">
+  <section id="nosotros" class="py-5 bg-black">
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-lg-10 text-center">
+        <div class="col-lg-10 text-center text-white">
           <h2 class="mb-5">SOBRE <span class="text-red-custom">PAINITA</span></h2>
           
           <!-- Inspiración -->
-          <div class="card border-red-custom mb-5 card-hover-effect">
+          <div class="card bg-dark border-red-custom mb-5 card-hover-effect">
             <div class="row g-0">
-              <div class="col-md-4 d-flex align-items-center justify-content-center bg-light">
+              <div class="col-md-4 d-flex align-items-center justify-content-center bg-black">
                 <span class="fs-1">💎</span>
               </div>
               <div class="col-md-8">
                 <div class="card-body p-4 text-start">
                   <h4 class="card-title text-red-custom">Inspirados en la Piedra Más Rara</h4>
-                  <p class="card-text">
+                  <p class="card-text text-light">
                     Como la <strong>painita</strong> (la piedra preciosa más rara del mundo), 
                     ofrecemos un servicio financiero único. Nuestra rareza es combinar 
                     velocidad, transparencia y confiabilidad en un solo lugar.
@@ -145,13 +145,13 @@
           <!-- Misión y Visión -->
           <div class="row">
             <div class="col-md-6 mb-4">
-              <div class="card h-100 border-red-custom card-hover-effect">
+              <div class="card h-100 bg-dark border-red-custom card-hover-effect">
                 <div class="card-body p-4">
                   <div class="icono-valor mb-3">
                     <span class="fs-1">🎯</span>
                   </div>
                   <h4 class="text-red-custom">Misión</h4>
-                  <p>
+                  <p class="text-light">
                     Ser tan <strong>valiosos</strong> como la painita, ofreciendo préstamos rápidos 
                     con la transparencia de un cristal puro. Facilitamos acceso a crédito 
                     con procesos pulidos y eficientes.
@@ -161,13 +161,13 @@
             </div>
             
             <div class="col-md-6 mb-4">
-              <div class="card h-100 border-red-custom card-hover-effect">
+              <div class="card h-100 bg-dark border-red-custom card-hover-effect">
                 <div class="card-body p-4">
                   <div class="icono-valor mb-3">
                     <span class="fs-1">👁️</span>
                   </div>
                   <h4 class="text-red-custom">Visión</h4>
-                  <p>
+                  <p class="text-light">
                     Convertirnos en la <strong>joya más preciada</strong> del sector financiero, 
                     reconocidos por nuestra rareza en servicio al cliente y velocidad. 
                     Brillar con la intensidad de la painita en préstamos rápidos.
@@ -182,21 +182,21 @@
   </section>
 
   <!-- Testimonios -->
-  <section id="testimonios" class="py-5 bg-light">
+  <section id="testimonios" class="py-5 bg-black-custom">
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-lg-10 text-center">
+        <div class="col-lg-10 text-center text-white">
           <h2 class="mb-5">LO QUE DICEN <span class="text-red-custom">NUESTROS CLIENTES</span></h2>
           
           <div class="row">
             <!-- Testimonio 1 -->
             <div class="col-md-6 col-lg-4 mb-4">
-              <div class="card h-100 border-red-custom card-hover-effect">
+              <div class="card h-100 bg-dark border-red-custom card-hover-effect">
                 <div class="card-body p-4">
                   <div class="icono-valor mb-3">
                     <span class="fs-1">🏥</span>
                   </div>
-                  <p class="fst-italic mb-4">"Me salvó en un momento crítico. La cuota fue un poco alta, pero necesitaba el dinero urgente para pagar una urgencia médica."</p>
+                  <p class="fst-italic mb-4 text-light">"Me salvó en un momento crítico. La cuota fue un poco alta, pero necesitaba el dinero urgente para pagar una urgencia médica."</p>
                   <div class="text-red-custom fw-bold">— Carlos M.</div>
                 </div>
               </div>
@@ -204,12 +204,12 @@
 
             <!-- Testimonio 2 -->
             <div class="col-md-6 col-lg-4 mb-4">
-              <div class="card h-100 border-red-custom card-hover-effect">
+              <div class="card h-100 bg-dark border-red-custom card-hover-effect">
                 <div class="card-body p-4">
                   <div class="icono-valor mb-3">
                     <span class="fs-1">💼</span>
                   </div>
-                  <p class="fst-italic mb-4">"Ningún banco te presta en 5 minutos. En mi caso, era eso o perder una oportunidad de trabajo. La app fue rápida y cumplió."</p>
+                  <p class="fst-italic mb-4 text-light">"Ningún banco te presta en 5 minutos. En mi caso, era eso o perder una oportunidad de trabajo. La app fue rápida y cumplió."</p>
                   <div class="text-red-custom fw-bold">— Ana L.</div>
                 </div>
               </div>
@@ -217,12 +217,12 @@
 
             <!-- Testimonio 3 -->
             <div class="col-md-6 col-lg-4 mb-4">
-              <div class="card h-100 border-red-custom card-hover-effect">
+              <div class="card h-100 bg-dark border-red-custom card-hover-effect">
                 <div class="card-body p-4">
                   <div class="icono-valor mb-3">
                     <span class="fs-1">⏱️</span>
                   </div>
-                  <p class="fst-italic mb-4">"Los intereses son elevados, pero cuando uno está en apuros, lo último que quiere es esperar papeles. Esta app me prestó cuando nadie más lo hacía."</p>
+                  <p class="fst-italic mb-4 text-light">"Los intereses son elevados, pero cuando uno está en apuros, lo último que quiere es esperar papeles. Esta app me prestó cuando nadie más lo hacía."</p>
                   <div class="text-red-custom fw-bold">— Javier R.</div>
                 </div>
               </div>
@@ -230,12 +230,12 @@
 
             <!-- Testimonio 4 -->
             <div class="col-md-6 col-lg-4 mb-4">
-              <div class="card h-100 border-red-custom card-hover-effect">
+              <div class="card h-100 bg-dark border-red-custom card-hover-effect">
                 <div class="card-body p-4">
                   <div class="icono-valor mb-3">
                     <span class="fs-1">📝</span>
                   </div>
-                  <p class="fst-italic mb-4">"No es la opción más barata, pero sí es la más rápida. Me gustó que no me pidieron tanto papeleo. Es un préstamo de emergencia."</p>
+                  <p class="fst-italic mb-4 text-light">"No es la opción más barata, pero sí es la más rápida. Me gustó que no me pidieron tanto papeleo. Es un préstamo de emergencia."</p>
                   <div class="text-red-custom fw-bold">— Sofía G.</div>
                 </div>
               </div>
@@ -243,12 +243,12 @@
 
             <!-- Testimonio 5 -->
             <div class="col-md-6 col-lg-4 mb-4">
-              <div class="card h-100 border-red-custom card-hover-effect">
+              <div class="card h-100 bg-dark border-red-custom card-hover-effect">
                 <div class="card-body p-4">
                   <div class="icono-valor mb-3">
                     <span class="fs-1">⏰</span>
                   </div>
-                  <p class="fst-italic mb-4">"Lo importante es pagar a tiempo. Cuando me quedé sin plata para el arriendo, fue lo único que me respondió. Ahora estoy al día."</p>
+                  <p class="fst-italic mb-4 text-light">"Lo importante es pagar a tiempo. Cuando me quedé sin plata para el arriendo, fue lo único que me respondió. Ahora estoy al día."</p>
                   <div class="text-red-custom fw-bold">— Diego P.</div>
                 </div>
               </div>
@@ -256,12 +256,12 @@
 
             <!-- Testimonio 6 -->
             <div class="col-md-6 col-lg-4 mb-4">
-              <div class="card h-100 border-red-custom card-hover-effect">
+              <div class="card h-100 bg-dark border-red-custom card-hover-effect">
                 <div class="card-body p-4">
                   <div class="icono-valor mb-3">
                     <span class="fs-1">💰</span>
                   </div>
-                  <p class="fst-italic mb-4">"Me pareció costoso al principio, pero después entendí que la rapidez tiene su precio. Me ayudó a salir de una deuda más grave."</p>
+                  <p class="fst-italic mb-4 text-light">"Me pareció costoso al principio, pero después entendí que la rapidez tiene su precio. Me ayudó a salir de una deuda más grave."</p>
                   <div class="text-red-custom fw-bold">— Marta S.</div>
                 </div>
               </div>
@@ -273,7 +273,7 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-red-custom text-white py-4">
+  <footer class="bg-black py-4 text-white">
     <div class="container">
       <div class="row">
         <div class="col-md-6 text-center text-md-start">
