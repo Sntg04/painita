@@ -1,25 +1,18 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const path = require('path');
 
-// Configurar middleware
-app.use(express.static(path.join(__dirname, '../public')));
+// Configuración básica
 app.use(express.json());
+app.use(express.static(path.join(__dirname, '../public')));
 
-// Ruta principal
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/index.html'));
-});
-
-// Ruta para solicitud de préstamo
-app.post('/api/solicitar', (req, res) => {
-    const { monto, plazo } = req.body;
-    // Aquí iría la lógica para guardar en la base de datos
-    res.json({ success: true, message: "Solicitud recibida" });
-});
+// Rutas
+app.use('/api/prestamos', require('./routes/prestamos'));
+app.use('/api/crm', require('./routes/crm'));
 
 // Iniciar servidor
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-    console.log(`Servidor corriendo en http://localhost:${PORT}`);
+  console.log(`PAINITA corriendo en puerto ${PORT}`);
 });

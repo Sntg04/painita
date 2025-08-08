@@ -11,7 +11,17 @@
   "author": "TuNombre",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^17.2.1",
     "express": "^4.21.2",
     "mysql2": "^3.14.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sntg04/painita.git"
+  },
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Sntg04/painita/issues"
+  },
+  "homepage": "https://github.com/Sntg04/painita#readme"
 }
