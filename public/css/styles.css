@@ -2,6 +2,7 @@
   --red: #FF0000;
   --black: #000000;
   --white: #FFFFFF;
+  --light-gray: #f8f9fa;
 }
 
 /* Colores personalizados */
@@ -13,10 +14,6 @@
   color: var(--red) !important;
 }
 
-.bg-dark-custom {
-  background-color: #111111 !important;
-}
-
 .border-red-custom {
   border: 2px solid var(--red) !important;
 }
@@ -26,31 +23,55 @@
   color: var(--white);
   border: none;
   font-weight: bold;
+  transition: all 0.3s;
 }
 
 .btn-red-custom:hover {
-  background-color: #cc0000;
-  color: var(--white);
+  background-color: #d90000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos para la calculadora */
+/* Estilos para los sliders */
 .form-range::-webkit-slider-thumb {
   background: var(--red);
+  width: 20px;
+  height: 20px;
 }
 
 .form-range::-moz-range-thumb {
   background: var(--red);
+  width: 20px;
+  height: 20px;
 }
 
-.form-range::-ms-thumb {
-  background: var(--red);
+.form-range {
+  height: 8px;
 }
 
 /* Ajustes generales */
 body {
   font-family: 'Arial', sans-serif;
+  color: var(--black);
 }
 
 .card {
-  box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+  border-radius: 12px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Centrado de elementos */
+.container {
+  max-width: 1140px;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .display-5 {
+    font-size: 2.5rem !important;
+  }
 }
