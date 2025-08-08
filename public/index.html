@@ -6,35 +6,47 @@
   <title>PAINITA - Préstamos Rápidos</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="/css/styles.css" rel="stylesheet">
+  <link rel="icon" href="/images/favicon.png" type="image/png">
 </head>
 <body class="bg-white">
   <!-- Barra de Navegación -->
-  <nav class="navbar navbar-dark bg-red-custom py-3">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-red-custom py-3">
     <div class="container">
       <a class="navbar-brand fw-bold fs-3" href="#">
         <img src="/images/logo.png" alt="PAINITA" height="40" class="d-inline-block align-top me-2">
         PAINITA
       </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#calculadora">Calculadora</a></li>
+          <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="/solicitar">Solicitar</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section class="container my-5 text-center">
+  <section class="container my-5 py-4 text-center">
     <div class="row justify-content-center">
       <div class="col-lg-8">
         <h1 class="display-5 fw-bold mb-4">PRÉSTAMOS <span class="text-red-custom">INMEDIATOS</span></h1>
         <p class="lead mb-4 text-muted">Desde $100.000 hasta $1'200.000 con plazos de 8 a 120 días</p>
+        <a href="#calculadora" class="btn btn-red-custom btn-lg px-4">Calcular Ahora</a>
       </div>
     </div>
   </section>
 
   <!-- Calculadora -->
-  <section class="container mb-5">
+  <section id="calculadora" class="container mb-5 py-4">
     <div class="row justify-content-center">
-      <div class="col-md-6">
-        <div class="card border-red-custom shadow-sm">
+      <div class="col-md-8 col-lg-6">
+        <div class="card border-red-custom shadow-sm card-hover-effect">
           <div class="card-body p-4 text-center">
-            <h3 class="mb-4">CALCULA TU PRÉSTAMO</h3>
+            <h3 class="mb-4 text-red-custom">CALCULA TU PRÉSTAMO</h3>
             
             <!-- Monto -->
             <div class="mb-4">
@@ -70,25 +82,31 @@
   <!-- Beneficios -->
   <section class="bg-light py-5">
     <div class="container text-center">
-      <h2 class="mb-4">¿POR QUÉ <span class="text-red-custom">PAINITA</span>?</h2>
-      <div class="row">
+      <h2 class="mb-5">¿POR QUÉ <span class="text-red-custom">PAINITA</span>?</h2>
+      <div class="row justify-content-center">
         <div class="col-md-4 mb-4">
-          <div class="p-3">
-            <img src="/images/icono-rapido.png" alt="Rápido" height="60" class="mb-3">
+          <div class="p-4 h-100 card-hover-effect">
+            <div class="icono-valor">
+              <img src="/images/icono-rapido.png" alt="Rápido" width="40">
+            </div>
             <h5 class="text-red-custom">Rápido</h5>
             <p class="text-muted">Dinero en tu cuenta en menos de 24 horas</p>
           </div>
         </div>
         <div class="col-md-4 mb-4">
-          <div class="p-3">
-            <img src="/images/icono-facil.png" alt="Fácil" height="60" class="mb-3">
+          <div class="p-4 h-100 card-hover-effect">
+            <div class="icono-valor">
+              <img src="/images/icono-facil.png" alt="Fácil" width="40">
+            </div>
             <h5 class="text-red-custom">Fácil</h5>
             <p class="text-muted">Solo necesitas tu cédula y cuenta bancaria</p>
           </div>
         </div>
         <div class="col-md-4 mb-4">
-          <div class="p-3">
-            <img src="/images/icono-seguro.png" alt="Seguro" height="60" class="mb-3">
+          <div class="p-4 h-100 card-hover-effect">
+            <div class="icono-valor">
+              <img src="/images/icono-seguro.png" alt="Seguro" width="40">
+            </div>
             <h5 class="text-red-custom">Seguro</h5>
             <p class="text-muted">Tus datos están 100% protegidos</p>
           </div>
@@ -97,10 +115,84 @@
     </div>
   </section>
 
+  <!-- Sobre Nosotros -->
+  <section id="nosotros" class="py-5 bg-white">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10 text-center">
+          <h2 class="mb-5">SOBRE <span class="text-red-custom">PAINITA</span></h2>
+          
+          <!-- Inspiración -->
+          <div class="card border-red-custom mb-5 card-hover-effect">
+            <div class="row g-0">
+              <div class="col-md-4 d-flex align-items-center justify-content-center bg-light">
+                <img src="/images/painita-piedra.jpg" alt="Piedra Painita" class="img-fluid p-3" style="max-height: 250px;">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body p-4 text-start">
+                  <h4 class="card-title text-red-custom">Inspirados en la Piedra Más Rara</h4>
+                  <p class="card-text">
+                    Como la <strong>painita</strong> (la piedra preciosa más rara del mundo), 
+                    ofrecemos un servicio financiero único. Nuestra rareza es combinar 
+                    velocidad, transparencia y confiabilidad en un solo lugar.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Misión y Visión -->
+          <div class="row">
+            <div class="col-md-6 mb-4">
+              <div class="card h-100 border-red-custom card-hover-effect">
+                <div class="card-body p-4">
+                  <div class="icono-valor mb-3">
+                    <img src="/images/icono-mision.png" alt="Misión" width="40">
+                  </div>
+                  <h4 class="text-red-custom">Misión</h4>
+                  <p>
+                    Ser tan <strong>valiosos</strong> como la painita, ofreciendo préstamos rápidos 
+                    con la transparencia de un cristal puro. Facilitamos acceso a crédito 
+                    con procesos pulidos y eficientes.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-6 mb-4">
+              <div class="card h-100 border-red-custom card-hover-effect">
+                <div class="card-body p-4">
+                  <div class="icono-valor mb-3">
+                    <img src="/images/icono-vision.png" alt="Visión" width="40">
+                  </div>
+                  <h4 class="text-red-custom">Visión</h4>
+                  <p>
+                    Convertirnos en la <strong>joya más preciada</strong> del sector financiero, 
+                    reconocidos por nuestra rareza en servicio al cliente y velocidad. 
+                    Brillar con la intensidad de la painita en préstamos rápidos.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer class="bg-red-custom text-white py-4">
-    <div class="container text-center">
-      <p class="mb-0">© 2023 PAINITA - Todos los derechos reservados</p>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="mb-0">© 2023 PAINITA - Todos los derechos reservados</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <a href="#" class="text-white me-3">Términos</a>
+          <a href="#" class="text-white me-3">Privacidad</a>
+          <a href="#" class="text-white">Contacto</a>
+        </div>
+      </div>
     </div>
   </footer>
 
