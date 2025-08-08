@@ -1,29 +1,182 @@
 :root {
-  --red: #FF0000;
-  --black: #000000;
-  --dark-black: #111111;
+  --red: #E63946;
+  --red-dark: #C1121F;
   --white: #FFFFFF;
-  --light-gray: #f8f9fa;
-  --lighter-gray: #f5f5f5;
-  --dark-red: #cc0000;
+  --light-gray: #F8F9FA;
+  --dark-gray: #212529;
+  --black: #000000;
 }
 
 /* Estilos Base */
 body {
-  font-family: 'Arial', sans-serif;
-  color: var(--black);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--dark-gray);
   line-height: 1.6;
   overflow-x: hidden;
+}
+
+/* Tipografía Personalizada */
+h1, h2, h3, h4, h5, .display-4 {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  color: #6C757D;
+  font-size: 1.1rem;
+}
+
+/* Componentes Premium */
+.btn-red-custom {
+  background-color: var(--red);
+  color: var(--white);
+  border: none;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-red-custom:hover {
+  background-color: var(--red-dark);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(230, 57, 70, 0.3);
+}
+
+.btn-outline-light {
+  border: 2px solid var(--white);
+  color: var(--white);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
   background-color: var(--white);
+  color: var(--red);
 }
 
-/* Fondos Personalizados */
-.bg-light-custom {
-  background-color: var(--lighter-gray) !important;
+.btn-premium {
+  border-radius: 8px;
+  padding: 0.5rem 1.25rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
-.bg-dark-custom {
-  background-color: var(--dark-black) !important;
+/* Hero Section Premium */
+.hero-section {
+  background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
+  color: var(--white);
+  padding: 180px 0 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  background-image: url('/images/hero-pattern.png');
+  background-size: cover;
+  opacity: 0.1;
+}
+
+/* Calculadora Premium */
+.calculator-card {
+  background-color: var(--white);
+  border-radius: 12px;
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.calculator-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.slider-red::-webkit-slider-thumb {
+  background: var(--red);
+  width: 24px;
+  height: 24px;
+  margin-top: -8px;
+}
+
+.slider-red::-moz-range-thumb {
+  background: var(--red);
+  width: 24px;
+  height: 24px;
+}
+
+.slider-red {
+  height: 8px;
+  width: 100%;
+  -webkit-appearance: none;
+  background: #E9ECEF;
+  border-radius: 4px;
+}
+
+/* Beneficios Premium */
+.benefit-card {
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #E9ECEF;
+}
+
+.benefit-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
+}
+
+.benefit-icon {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(230, 57, 70, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-red {
+  font-size: 1.75rem;
+  color: var(--red);
+}
+
+/* Testimonios Premium */
+.testimonial-card {
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  border-left: 4px solid var(--red);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+.quote-icon {
+  font-size: 2.5rem;
+  line-height: 1;
+  opacity: 0.7;
+}
+
+.client-name {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.client-detail {
+  font-size: 0.85rem;
+  color: #ADB5BD;
 }
 
 /* Colores Personalizados */
@@ -31,180 +184,106 @@ body {
   background-color: var(--red) !important;
 }
 
+.bg-light-custom {
+  background-color: var(--light-gray) !important;
+}
+
+.bg-dark-custom {
+  background-color: var(--dark-gray) !important;
+}
+
+.bg-black {
+  background-color: var(--black) !important;
+}
+
 .text-red-custom {
   color: var(--red) !important;
 }
 
-.border-red-custom {
-  border: 2px solid var(--red) !important;
-}
-
-.btn-red-custom {
-  background-color: var(--red);
-  color: var(--white);
-  border: none;
-  font-weight: bold;
-  transition: all 0.3s ease;
-}
-
-.btn-red-custom:hover {
-  background-color: var(--dark-red);
-  color: var(--white);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Componentes */
-.card-hover-effect {
-  transition: transform 0.3s, box-shadow 0.3s;
-  border-radius: 12px;
-}
-
-.card-hover-effect:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
-}
-
-.icono-valor {
-  width: 70px;
-  height: 70px;
-  margin: 0 auto 1rem;
-  background-color: rgba(255, 0, 0, 0.1);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Sliders */
-.form-range::-webkit-slider-thumb {
-  background: var(--red);
-  width: 20px;
-  height: 20px;
-}
-
-.form-range::-moz-range-thumb {
-  background: var(--red);
-  width: 20px;
-  height: 20px;
-}
-
-.form-range {
-  height: 8px;
-  cursor: pointer;
-}
-
-/* Textos */
-.text-dark {
-  color: var(--black) !important;
-}
-
-.fst-italic {
-  font-style: italic;
-  position: relative;
-}
-
-.fst-italic::before,
-.fst-italic::after {
-  content: '"';
-  color: var(--red);
-  font-size: 1.2em;
-}
-
-/* Navbar */
+/* Navbar Premium */
 .navbar {
+  transition: all 0.3s ease;
+  padding: 1rem 0;
+}
+
+.navbar.scrolled {
+  padding: 0.5rem 0;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
 }
 
 .nav-link {
   font-weight: 500;
-  transition: all 0.3s;
+  padding: 0.5rem 1rem !important;
+  position: relative;
 }
 
-.nav-link:hover {
-  color: var(--red) !important;
-}
-
-/* Secciones */
-section {
-  padding: 5rem 0;
-}
-
-/* Testimonios Mejorados */
-#testimonios {
-  background-color: var(--black);
-}
-
-#testimonios .card {
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 1rem;
+  width: 0;
+  height: 2px;
   background-color: var(--white);
-  color: var(--black);
-  border: 2px solid var(--red);
+  transition: width 0.3s ease;
 }
 
-#testimonios .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(255, 0, 0, 0.2) !important;
+.nav-link:hover::after {
+  width: calc(100% - 2rem);
 }
 
-#testimonios .icono-valor {
-  background-color: rgba(255, 0, 0, 0.1);
+/* Footer Premium */
+footer a {
+  transition: color 0.2s ease;
 }
 
-#testimonios h2 {
-  color: var(--white);
-}
-
-#testimonios .card-body {
-  color: var(--black) !important;
-}
-
-#testimonios .fst-italic {
-  color: var(--dark-black) !important;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .display-5 {
-    font-size: 2.5rem !important;
-  }
-  
-  .card-body {
-    padding: 1.5rem !important;
-  }
-  
-  .navbar-brand {
-    font-size: 1.5rem !important;
-  }
-
-  section {
-    padding: 3rem 0;
-  }
+footer a:hover {
+  color: var(--red) !important;
+  text-decoration: none;
 }
 
 /* Animaciones */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-section {
-  animation: fadeIn 0.6s ease-out;
+.animate-section {
+  animation: fadeInUp 0.8s ease forwards;
 }
 
-/* Efectos hover para iconos */
-.card-hover-effect:hover .icono-valor {
-  transform: scale(1.1);
-  transition: transform 0.3s ease;
-  background-color: rgba(255, 0, 0, 0.2);
+/* Responsive */
+@media (max-width: 992px) {
+  .hero-section {
+    padding: 150px 0 80px;
+    text-align: center;
+  }
+  
+  .hero-section::before {
+    display: none;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
 }
 
-/* Contraste mejorado */
-.bg-black {
-  background-color: var(--black) !important;
-  color: var(--white);
-}
-
-.bg-white {
-  background-color: var(--white) !important;
-  color: var(--black);
+@media (max-width: 768px) {
+  .navbar {
+    background-color: var(--red) !important;
+  }
+  
+  .hero-section {
+    padding: 120px 0 60px;
+  }
+  
+  .display-4 {
+    font-size: 2.5rem;
+  }
 }
