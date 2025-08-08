@@ -4,24 +4,26 @@
   --dark-black: #111111;
   --white: #FFFFFF;
   --light-gray: #f8f9fa;
+  --lighter-gray: #f5f5f5;
   --dark-red: #cc0000;
 }
 
 /* Estilos Base */
 body {
   font-family: 'Arial', sans-serif;
-  color: var(--white);
+  color: var(--black);
   line-height: 1.6;
   overflow-x: hidden;
-  background-color: var(--dark-black);
+  background-color: var(--white);
 }
 
-.bg-custom {
-  background-color: var(--dark-black);
+/* Fondos Personalizados */
+.bg-light-custom {
+  background-color: var(--lighter-gray) !important;
 }
 
-.bg-black-custom {
-  background-color: var(--black);
+.bg-dark-custom {
+  background-color: var(--dark-black) !important;
 }
 
 /* Colores Personalizados */
@@ -49,7 +51,7 @@ body {
   background-color: var(--dark-red);
   color: var(--white);
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Componentes */
@@ -60,7 +62,7 @@ body {
 
 .card-hover-effect:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(255, 0, 0, 0.2) !important;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
 }
 
 .icono-valor {
@@ -93,8 +95,8 @@ body {
 }
 
 /* Textos */
-.text-light {
-  color: #e0e0e0 !important;
+.text-dark {
+  color: var(--black) !important;
 }
 
 .fst-italic {
@@ -111,7 +113,7 @@ body {
 
 /* Navbar */
 .navbar {
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
 }
 
 .nav-link {
@@ -164,8 +166,13 @@ section {
   background-color: rgba(255, 0, 0, 0.2);
 }
 
-/* Fondo oscuro para cards */
-.bg-dark {
-  background-color: var(--dark-black) !important;
+/* Contraste mejorado */
+.bg-black {
+  background-color: var(--black) !important;
   color: var(--white);
+}
+
+.bg-white {
+  background-color: var(--white) !important;
+  color: var(--black);
 }
